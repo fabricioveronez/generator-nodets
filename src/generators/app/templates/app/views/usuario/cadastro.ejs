@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <% include ../partials/head %>            
+    </head>
+    <body>              
+        <div class="container">            
+            <form method="post" action="/usuario/cadastro" class="form-signin">
+                <h2 class="form-signin-heading">Cadastro</h2>
+
+                <input type="hidden" id="_id" name="_id" value='<%= usuario._id%>' />
+                
+                <div class="form-group">
+                    <label for="login">Nome</label>
+                    <input type="text" value='<%= usuario.nome%>' id="nome" name="nome" class="form-control" placeholder="Nome" required autofocus>
+                </div>
+                
+                <div class="form-group">
+                    <label for="inputPassword" class="sr-only">Email</label>
+                    <input type="text" value='<%= usuario.email%>' id="email" name="email" class="form-control" placeholder="Email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="login" class="sr-only">Login</label>
+                    <input type="text" value='<%= usuario.login%>' id="login" name="login" class="form-control" placeholder="Login" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="inputPassword" class="sr-only">Senha</label>
+                    <input type="text" value='<%= usuario.senha%>' id="senha" name="senha" class="form-control" placeholder="Senha" required>
+                </div>
+
+                
+                
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+            </form>            
+        </div>
+        <% include ../partials/footer %>        
+    </body>
+</html>
